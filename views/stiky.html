@@ -1,0 +1,42 @@
+
+
+  <button style="display: block;margin-left: 74px;margin-bottom: 23px;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Ajouter un user story</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Saisir les informations de user story</h4>
+        </div>
+        <div class="modal-body">
+         <div class="form-group">
+    <input type="hidden" class="form-control" ng-model="id" value="22" >
+  </div>
+  <div class="form-group">
+    <label for="pwd">Description:</label>
+    <textarea  class="form-control" ng-model="text"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-default" ng-click="add();">Inserer</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="fermer" class="btn btn-default" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="col-sm-3 mondiv" ng-repeat="elem in stiky">
+      <i class="pin"></i>
+  <blockquote class="note yellow">
+   ID : {{elem.id}}<br/>Texte : {{elem.text}}
+
+    <span ng-click="delete(elem.id);"class="delete" style="position: absolute;top: 0;right: 28px;font-family:arial;">X</span>
+	
+  </blockquote>
+
+</div>
+
+
+
